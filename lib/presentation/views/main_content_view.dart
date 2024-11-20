@@ -10,8 +10,6 @@ class MainContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isDesktop = MediaQuery.of(context).size.width >= 1200;
-
     return Container(
       color: Colors.grey[100],
       child: Column(
@@ -20,13 +18,11 @@ class MainContent extends StatelessWidget {
           const SizedBox(height: 20),
           _buildHeader(context),
           const SizedBox(height: 16),
-          if (!isDesktop) const ProgressCard(),
-          const SizedBox(height: 16),
           _buildSearchBar(),
           const SizedBox(height: 16),
           _buildFilters(),
           const SizedBox(height: 8),
-          Expanded(child: _buildActivityList()),
+          Expanded(child: _buildActivityList(context)),
         ],
       ),
     );
@@ -145,12 +141,25 @@ class MainContent extends StatelessWidget {
   }
 
   /// Lista de actividades
-  Widget _buildActivityList() {
+  Widget _buildActivityList(BuildContext context) {
+    final bool isDesktop = MediaQuery.of(context).size.width >= 1200;
+
     return ListView.builder(
       padding: const EdgeInsets.all(16),
-      itemCount: viewModel.activities.length,
+      itemCount:
+          viewModel.activities.length +
+          (isDesktop
+              ? 0
+              : 1), // +1 para incluir ProgressCard si no es escritorio.
       itemBuilder: (context, index) {
-        return ActivityCard(activity: viewModel.activities[index]);
+        if (!isDesktop && index == 0) {
+          // Agrega ProgressCard como el primer elemento si no es escritorio.
+          return const ProgressCard();
+        }
+
+        // Ajusta el índice para las actividades si ProgressCard está presente.
+        final activityIndex = isDesktop ? index : index - 1;
+        return ActivityCard(activity: viewModel.activities[activityIndex]);
       },
     );
   }

@@ -29,7 +29,8 @@ class HomeScreen extends StatelessWidget {
           isDesktop
               ? null
               : BottomNavigationBar(
-                backgroundColor: Colors.black,
+                type: BottomNavigationBarType.fixed,
+                backgroundColor: Colors.white,
                 showSelectedLabels: false,
                 showUnselectedLabels: false,
                 items: [
@@ -48,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                       width: 50,
                       height: 50,
                       decoration: BoxDecoration(
-                        color: Color(0xFFC1EBFF),
+                        color: Colors.lightBlueAccent,
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(Icons.add, color: Colors.white),
