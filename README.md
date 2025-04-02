@@ -1,16 +1,18 @@
-# townsquare
+# TownSquare
 
-A new Flutter project.
+TownSquare is a responsive web and mobile app designed to make life easier and more enjoyable for parents and kids. It connects families with local activities, services, and healthy living options.
 
-## Getting Started
+## Features
+- **Sports & Activities**: Join football, MMA, running clubs, yoga, pilates, and kids' classes.
+- **Healthy Living**: Earn points for activities and supporting local organic stores.
+- **Trusted Services**: Find vetted nannies, cleaners, and private chefs.
+- **Smart Concierge**: AI-powered local recommendations and instant assistance.
+- **Community Hub**: Spaces for parents and kids to enjoy activities together or separately.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Images from the app
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![image](https://github.com/user-attachments/assets/e771cc59-81fa-4353-8a29-489659b1d068)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Note
+This project was a frontend practice as a technical test and does not include a backend.
