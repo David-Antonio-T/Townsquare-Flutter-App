@@ -1,4 +1,5 @@
 # TownSquare
+DEPLOYED WEB APP: https://david-antonio-t.github.io/townsquare-web/
 
 TownSquare is a responsive web and mobile app designed to make life easier and more enjoyable for parents and kids. It connects families with local activities, services, and healthy living options.
 
